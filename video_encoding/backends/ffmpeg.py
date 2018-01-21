@@ -154,9 +154,13 @@ class FFmpegBackend(BaseEncodingBackend):
         stdout, __ = self._check_returncode(process)
 
         media_info = self._parse_media_info(stdout)
-
+        try:
+            duration = media_info['format']['duration']
+        except KeyError:
+            duration = 10
+            
         return {
-            'duration': float(media_info['format']['duration']),
+            'duration': float(duration),
             'width': int(media_info['video'][0]['width']),
             'height': int(media_info['video'][0]['height']),
         }
