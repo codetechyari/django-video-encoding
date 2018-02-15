@@ -13,7 +13,7 @@ class VideoEncodingAppConf(AppConf):
                 'name': 'webm_sd',
                 'extension': 'webm',
                 'params': [
-                    '-b:v', '1000k', '-maxrate', '1000k', '-bufsize', '2000k',
+                    '-b:v', '3000k', '-maxrate', '3000k', '-bufsize', '6000k',
                     '-codec:v', 'libvpx', '-r', '30',
                     '-vf', 'scale=-1:480', '-qmin', '10', '-qmax', '42',
                     '-codec:a', 'libvorbis', '-b:a', '128k', '-f', 'webm',
