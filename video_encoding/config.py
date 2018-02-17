@@ -43,10 +43,7 @@ class VideoEncodingAppConf(AppConf):
                 'name': 'mp4_hd',
                 'extension': 'mp4',
                 'params': ['-c:v', 'copy',
-                    # '-codec:v', 'libx264', '-crf', '0', '-preset', 'veryfast',
-                    # '-b:v', '3000k', '-maxrate', '3000k', '-bufsize', '6000k',
-                    # '-vf', 'scale=530:-1',
-                    # '-codec:a', 'aac', '-b:a', '128k', '-strict', '-2',
+                    
 
                 ],
             },
